@@ -4,7 +4,7 @@
     <xacro:property name="base_width" value="0.4" />
     <xacro:property name="base_height" value="0.2" />
     <xacro:property name="wheel_radius" value="0.1" />
-    <xacro:property name="wheel_lenght" value="0.05" />
+    <xacro:property name="wheel_length" value="0.05" />
     <xacro:property name="sphere_radius" value="0.05" />
 
     <material name="blue">
@@ -30,24 +30,24 @@
             </geometry>
             <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0"/>
         </collision>
-        <xacro:box_inertia  m="5.0" l = "${base_length}" w="${base_width}" h = "${base_height}" xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+        <xacro:box_inertia m="5.0" l="${base_length}" w="${base_width}" h="${base_height}" xyz="0 0 ${base_height / 2.0}" rpy="0 0 0"/>
     </link>
     
     <link name="caster_wheel_link">
         <visual>
             <geometry>
-                <sphere radius="${wheel_radius / 2 }"/>
+                <sphere radius="${wheel_radius / 2.0}"/>
             </geometry>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <material name="grey"/>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="${wheel_radius / 2 }"/>
+                <sphere radius="${wheel_radius / 2.0}"/>
             </geometry>
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </collision>
-        <xacro:sphere_inertia m = "1.0" r = "${wheel_radius / 2}" xyz="0 0 0" rpy="0 0 0"/>
+        <xacro:sphere_inertia m="1.0" r="${wheel_radius / 2.0}" xyz="0 0 0" rpy="0 0 0"/>
     </link>
     
     <xacro:wheel_link prefix="right" />
