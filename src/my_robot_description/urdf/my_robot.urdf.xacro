@@ -4,4 +4,9 @@
     <xacro:include filename = "/home/tayya/robot_ws/src/my_robot_description/urdf/mobile_base.xacro"/>
     <xacro:include filename = "/home/tayya/robot_ws/src/my_robot_description/urdf/mobile_base_gazebo.xacro"/>
     <xacro:include filename = "/home/tayya/robot_ws/src/my_robot_description/urdf/camera.xacro"/>
+
+    <xacro:include filename = "/home/tayya/robot_ws/src/my_robot_description/urdf/arm.xacro">
+    <xacro:include filename = "/home/tayya/robot_ws/src/my_robot_description/urdf/arm_gazebo.xacro">
+
+    
 </robot>
